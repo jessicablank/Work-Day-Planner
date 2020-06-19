@@ -1,5 +1,6 @@
 # Work-Day-Planner
-A simple planner for your work day
+A simple planner for your work day: 
+[Git Hub Deployed Page Link](https://jessicablank.github.io/Work-Day-Planner/)
 
 ## Project Details
 * GIVEN an HTML template for a day planner styled with CSS
@@ -27,7 +28,13 @@ WHEN I refresh the page
 THEN the saved events persist
 
 ## Tests
+* Is the screen mobile responsive?
+* Does the clear button clear all data?
+* Does data entered and saved persist after the page is refreshed?
 
+
+##Resources
+https://momentjs.com/
 
 
 
