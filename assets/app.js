@@ -16,6 +16,7 @@ $("#currentDay").text(todayDate.format('dddd, '+'MMMM Do YYYY'));
   
 
   // set color attribute for blocks according to current time
+  // used styling info from css file, but was not able to link to css file
   if (blockTime == milTime) {
     $("#" + index).css({"background-color": "#ff6961", "color": "white"});
   } 
