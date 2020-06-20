@@ -67,7 +67,6 @@ $("#clear").click(function() {
 
 $(".saveBtn").on("click", function() {
     var messageId = $(this).data("time");
-    console.log($(this).data("time"));
     $("#" + messageId).val();
     localStorage.setItem(messageId, $("#" + messageId).val());
   })
