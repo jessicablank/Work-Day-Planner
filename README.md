@@ -2,6 +2,9 @@
 A simple planner for your work day: 
 [Git Hub Deployed Page Link](https://jessicablank.github.io/Work-Day-Planner/)
 
+Screen Shot of deployed webpage
+
+
 ## Project Details
 * GIVEN an HTML template for a day planner styled with CSS
 * LINK to Jquery to meet the acceptance criteria below

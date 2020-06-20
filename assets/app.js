@@ -15,16 +15,15 @@ $("#currentDay").text(todayDate.format('dddd, '+'MMMM Do YYYY'));
     var blockTime = $("#" + index).data("military");
   
 
-  // set color attribute for blocks according to current time
-  // used styling info from css file, but was not able to link to css file
+  // set color attribute for blocks according to current time using classes in css file
   if (blockTime == milTime) {
-    $("#" + index).css({"background-color": "#ff6961", "color": "white"});
+    $("#" + index).addClass("present");
   } 
   else if (blockTime < milTime) {
-    $("#" + index).css({"background-color": "#d3d3d3", "color": "white"});
+    $("#" + index).addClass("past");
   }
   else if (blockTime > milTime) {
-    $("#" + index).css({"background-color": "#77dd77", "color": "white"});
+    $("#" + index).addClass("future");
   }
   
  }
