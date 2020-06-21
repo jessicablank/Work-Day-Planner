@@ -3,8 +3,7 @@ A simple planner for your work day:
 [Git Hub Deployed Page Link](https://jessicablank.github.io/Work-Day-Planner/)
 
 Screen Shot of deployed webpage:
-![screenshot](screenshot of homepage.PNG)
-Format: ![screenshot of homepage](https://github.com/jessicablank/Work-Day-Planner/blob/master/screenshot%20of%20homepage.PNG)
+![screenshot of homepage](https://github.com/jessicablank/Work-Day-Planner/blob/master/screenshot%20of%20homepage.PNG)
 
 
 ## Project Details
