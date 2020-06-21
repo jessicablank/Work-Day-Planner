@@ -4,7 +4,7 @@ body {
     line-height: 1;
   }
   
-  textarea{
+  textarea {
     background: transparent;
     border: none;
     resize: none;
@@ -21,7 +21,7 @@ body {
     border-bottom: 10px solid black;
   }
   
-  .description{
+  .description {
     white-space: pre-wrap;
   }
   
@@ -51,7 +51,7 @@ body {
   
   .present {
     background-color: #ff6961;
-    color: white;
+    color: black;
   }
   
   .future {
@@ -65,7 +65,6 @@ body {
     border-bottom-right-radius: 15px;
     background-color: #06AED5;
     color: white;
-    
   }
 
   .clearBTN{

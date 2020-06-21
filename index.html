@@ -1,56 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-      <button id="clear" class=clearBTN ">CLEAR SCHEDULE</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <title>Work Day Scheduler</title>
+</head>
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+    <button id="clear" class=clearBTN ">CLEAR SCHEDULE</button>
     </header>
-    <div class="container">
+    <div class=" container">
 
       <!-- time blocks go here, utilizing bootstrap input groups and css style sheet -->
       <div class="input-group row time-block">
         <div class="input-group-append">
           <span class="input-group-text hour time">
             9 AM
-          </span>  
+          </span>
         </div>
-        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="9" data-military="9"></textarea>
+        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="9"
+          data-military="9"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="9"><i class="fas fa-save"></i></button>
+          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="9"><i
+              class="fas fa-save"></i></button>
         </div>
       </div>
-    
+
       <div class="input-group row time-block">
         <div class="input-group-append">
           <span class="input-group-text hour time">10 AM</span>
         </div>
-        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="10" data-military="10"></textarea>
+        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="10"
+          data-military="10"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="10"><i class="fas fa-save"></i></button>
+          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="10"><i
+              class="fas fa-save"></i></button>
         </div>
       </div>
 
@@ -58,9 +53,11 @@
         <div class="input-group-append">
           <span class="input-group-text hour">11 AM</span>
         </div>
-        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="11" data-military="11"></textarea>
+        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="11"
+          data-military="11"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="11"><i class="fas fa-save"></i></button>
+          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="11"><i
+              class="fas fa-save"></i></button>
         </div>
       </div>
 
@@ -68,9 +65,11 @@
         <div class="input-group-append">
           <span class="input-group-text hour">12 PM</span>
         </div>
-        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="12" data-military="12"></textarea>
+        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="12"
+          data-military="12"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="12"><i class="fas fa-save"></i></button>
+          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="12"><i
+              class="fas fa-save"></i></button>
         </div>
       </div>
 
@@ -78,9 +77,11 @@
         <div class="input-group-append">
           <span class="input-group-text hour">1 PM</span>
         </div>
-        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="13" data-military="13"></textarea>
+        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="13"
+          data-military="13"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="13"><i class="fas fa-save"></i></button>
+          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="13"><i
+              class="fas fa-save"></i></button>
         </div>
       </div>
 
@@ -88,9 +89,11 @@
         <div class="input-group-append">
           <span class="input-group-text hour">2 PM</span>
         </div>
-        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="14" data-military="14"></textarea>
+        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="14"
+          data-military="14"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="14"><i class="fas fa-save"></i></button>
+          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="14"><i
+              class="fas fa-save"></i></button>
         </div>
       </div>
 
@@ -98,9 +101,11 @@
         <div class="input-group-append">
           <span class="input-group-text hour">3 PM</span>
         </div>
-        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="15" data-military="15"></textarea>
+        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="15"
+          data-military="15"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="15"><i class="fas fa-save"></i></button>
+          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="15"><i
+              class="fas fa-save"></i></button>
         </div>
       </div>
 
@@ -108,9 +113,11 @@
         <div class="input-group-append">
           <span class="input-group-text hour">4 PM</span>
         </div>
-        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="16" data-military="16"></textarea>
+        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="16"
+          data-military="16"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="16"><i class="fas fa-save"></i></button>
+          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="16"><i
+              class="fas fa-save"></i></button>
         </div>
       </div>
 
@@ -118,17 +125,19 @@
         <div class="input-group-append">
           <span class="input-group-text hour">5 PM</span>
         </div>
-        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="17" data-military="17"></textarea>
+        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="17"
+          data-military="17"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="17"><i class="fas fa-save"></i></button>
+          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="17"><i
+              class="fas fa-save"></i></button>
         </div>
       </div>
-    </div>
+      </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="assets/app.js"></script>
-      
-  </body>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+      <script src="assets/app.js"></script>
+
+</body>
 </html>
