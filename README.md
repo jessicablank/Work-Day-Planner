@@ -33,12 +33,13 @@ THEN the saved events persist
 ## Tests
 * Is the screen mobile responsive?
 * Does the clear button clear all data?
-* Does data entered and saved persist after the page is refreshed?
+* Does task entered entered and saved persist after the page is refreshed?
 
 
 ##Resources
 https://momentjs.com/
 https://www.w3schools.com/bootstrap4/bootstrap_forms_input_group.asp
+
 
 
 

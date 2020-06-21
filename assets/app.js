@@ -5,7 +5,7 @@ var todayDate = moment();
 $("#currentDay").text(todayDate.format('dddd, '+'MMMM Do YYYY'));
 
  //set variable for 12-hour time format
- var currentTime = moment().format("h");
+ var currentTime = moment().format("H");
   //set variable for 24-hour time format
  var milTime = moment().format("H");
 
