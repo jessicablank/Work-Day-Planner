@@ -2,7 +2,7 @@
 var todayDate = moment();
 
 //pull today's date, connect to id in html header, and format
-$("#currentDay").text(todayDate.format('dddd, '+'MMMM Do YYYY'));
+$("#currentDay").text(todayDate.format('dddd, '+'MMMM Do, ' +'YYYY'));
 
  //set variable for 12-hour time format
  var currentTime = moment().format("H");
