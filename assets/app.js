@@ -1,36 +1,42 @@
-// wait for page to finish loading
-
-dayjs().format()
-
+// Wait for page to finish loading
 $(function(){
+  //Load date on jumbotron
 let dt = new Date();
 let todaysDate =  `${dt.getMonth()+1} / ${dt.getDate()} / ${dt.getFullYear()}`;
-let currentHour = dt.getHours();
-console.log(currentHour)
-
-// Display date in header
 $("#currentDay").text(todaysDate);
 
+//Check Time
+setInterval(checkTime(), 15000);
+
+// Activate save button
+$(".saveBtn").on("click", function() {
+    // Save task and time
+    let task = $(this).siblings(".description").val();
+    let time = $(this).parent().attr("id");
+
+    //Save in local storage
+    localStorage.setItem(time,task);
+  })
 
 function checkTime(){
-  let dt = new Date();
-  let currentHour = dt.getHours();
+  let currentHour = dayjs().hour()
+  console.log(currentHour)
   //Loop over time blocks
-  for (let hour = 9; hour <=24; hour++){
-    let blockTime = $("#"+ hour)
-    
-  // set color attribute for blocks according to current time using bootstrap classes
+  $(".time-block").each(function(){
+    let blockTime= parseInt($(this).attr("id").split("-")[1])
+
+  // set color attribute for description according to current time using bootstrap classes
   if (blockTime < currentHour){
-    $("#" + hour).addClass("bg-secondary");
+    $(this).addClass("bg-secondary");
   } else if
   (blockTime === currentHour) {
-    $("#" + hour).removeClass("bg-secondary");
-    $("#" + hour).addClass("bg-success");
+    $(this).removeClass("bg-secondary");
+    $(this).addClass("bg-success");
   } else if (blockTime > currentHour) {
-    $("#" + hour).removeClass("bg-success");
-    $("#" + hour).addClass("bg-warning");
+    $(this).removeClass("bg-success");
+    $(this).addClass("bg-warning");
   } else {
-    //If after 5pm, toggle dark mode
+    // If after 5pm, toggle dark mode
     // $(".hour").addClass("bg-primary")
     // $(".hour").addClass("text-white")
     // $(".description").addClass("bg-primary")
@@ -40,10 +46,11 @@ function checkTime(){
     // $("body").addClass("bg-secondary")
     // $("body").addClass("text-white")
   }
-  }  
+})
  }
 
- setInterval(checkTime(), 30000)
+
+
  
 
 //button to clear local and refresh the page
@@ -52,41 +59,19 @@ $("#clearBTN").click(function() {
     location.reload()
 });
 
-  //set variable to get submitted tasks out of local storage for each time block
-  var nineAM = localStorage.getItem("9");
-  $("#9").val(nineAM);
+  //Load any saved data from local storage
+  $("#9AM .description").val(localStorage.getItem("9AM"))
+  $("#10AM .description").val(localStorage.getItem("10AM"))
+  $("#11AM .description").val(localStorage.getItem("11AM"))
+  $("#12PM .description").val(localStorage.getItem("12AM"))
+  $("#1PM .description").val(localStorage.getItem("1PM"))
+  $("#2PM .description").val(localStorage.getItem("2PM"))
+  $("#3PM .description").val(localStorage.getItem("3PM"))
+  $("#4PM .description").val(localStorage.getItem("4PM"))
+  $("#5PM .description").val(localStorage.getItem("5PM"))
 
-  var tenAM = localStorage.getItem("10");
-  $("#10").val(tenAM);
 
-  var elevenAM = localStorage.getItem("11");
-  $("#11").val(elevenAM);
 
-  var noon = localStorage.getItem("12");
-  $("#12").val(noon);
-
-  var onePM = localStorage.getItem("13");
-  $("#13").val(onePM);
-
-  var twoPM = localStorage.getItem("14");
-  $("#14").val(twoPM);
-
-  var threePM = localStorage.getItem("15");
-  $("#15").val(threePM);
-
-  var fourPM = localStorage.getItem("16");
-  $("#16").val(fourPM);
-
-  var fivePM = localStorage.getItem("17");
-  $("#17").val(fivePM);
-
-//function to save task into local storage
-
-$(".saveBtn").on("click", function() {
-    var messageId = $(this).data("time");
-    $("#" + messageId).val();
-    localStorage.setItem(messageId, $("#" + messageId).val());
-  })
 
 })
 

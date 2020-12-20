@@ -6,12 +6,12 @@
   }
   
   .time {
-    border-color: black;
+    border: 0.10rem solid gray;
+    padding: 1rem;
+    text-align: center;
+    vertical-align: 1rem;
   }
-  .saveBtn i:hover {
-    font-size: 20px;
-    transition: all .3s ease-in-out;
-  }
+
 
 
   
