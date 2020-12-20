@@ -17,127 +17,108 @@
 
 <body>
   <header class="jumbotron">
-    <h1 class="display-3">Work Day Scheduler</h1>
+    <h1 class="display-4">Work Day Scheduler</h1>
     <p class="lead">A simple way to schedule your work day!</p>
     <p id="currentDay" class="lead"></p>
-    <button id="clear" class=clearBTN ">CLEAR SCHEDULE</button>
+    <button id="clearBTN" class="btn btn-danger">CLEAR SCHEDULE</button>
     </header>
-     <!-- time blocks start -->
+     <!-- time blocks container -->
     <div class="container">
-      <div class="input-group row time-block">
-        <div class="input-group-append">
-          <span class="input-group-text light hour time">
-            9 AM
-          </span>
-        </div>
-        <textarea class="form-control col-md-10 description" aria-label="With textarea" id="9"
-         ></textarea>
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="9"><i
-              class="fas fa-save"></i></button>
-        </div>
+      <!-- 9 AM -->
+      <div class="row time-block" id="9AM">
+          <div class="col-md-1 align-middle border time ">
+           <p>9 AM</p> 
+          </div>
+          <textarea class="col-md-10 description" aria-label="Type Your task for 9 AM"></textarea>
+          <button class="btn btn-outline-secondary saveBtn" type="button">
+            <h3><i class="fas fa-save align-middle"></i></h3></button>
       </div>
 
-      <div class="input-group row time-block">
-        <div class="input-group-append">
-          <span class="input-group-text hour light time">10 AM</span>
+       <!-- 10 AM -->
+       <div class="row time-block" id="10AM">
+        <div class="col-md-1 time">
+          <p>10 AM</p>
         </div>
-        <textarea class="form-control col-md-10 description light" aria-label="With textarea" id="10"
-          ></textarea>
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="10"><i
-              class="fas fa-save"></i></button>
-        </div>
+        <textarea class="col-md-10 description" aria-label="Type Your task for 10 AM"></textarea>
+        <button class="btn btn-outline-secondary saveBtn" type="button">
+          <i class="fas fa-save"></i></button>
       </div>
 
-      <div class="input-group row time-block">
-        <div class="input-group-append">
-          <span class="input-group-text light hour">11 AM</span>
-        </div>
-        <textarea class="form-control col-md-10 description light" aria-label="With textarea" id="11"
-          ></textarea>
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="11"><i
-              class="fas fa-save"></i></button>
-        </div>
+       <!-- 11 AM -->
+      <div class="row time-block" id="11AM">
+          <div class="col-md-1 time">
+           <p> 11 AM </p>
+          </div>
+          <textarea class="col-md-10 description" aria-label="Type Your task for 11 AM"></textarea>
+          <button class="btn btn-outline-secondary saveBtn" type="button">
+            <i class="fas fa-save"></i></button>
       </div>
 
-      <div class="input-group row time-block">
-        <div class="input-group-append">
-          <span class="input-group-text light hour">12 PM</span>
-        </div>
-        <textarea class="form-control col-md-10 description light" aria-label="With textarea" id="12"
-         ></textarea>
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="12"><i
-              class="fas fa-save"></i></button>
-        </div>
+      <!-- 12 PM -->
+      <div class="row time-block" id="12PM">
+          <div class="col-md-1 time">
+        <p> 12 PM </p>
+          </div>
+          <textarea class="col-md-10 description" aria-label="Type Your task for 12 PM"></textarea>
+          <button class="btn btn-outline-secondary saveBtn" type="button">
+            <i class="fas fa-save"></i></button>
       </div>
 
-      <div class="input-group row time-block">
-        <div class="input-group-append">
-          <span class="input-group-text light hour">1 PM</span>
+       <!-- 1 PM -->
+       <div class="row time-block" id="1PM">
+        <div class="col-md-1 time">
+         <p> 1 PM </p>
         </div>
-        <textarea class="form-control col-md-10 description light" aria-label="With textarea" id="13"
-         ></textarea>
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="13"><i
-              class="fas fa-save"></i></button>
+        <textarea class="col-md-10 description" aria-label="Type Your task for 1 PM"></textarea>
+        <button class="btn btn-outline-secondary saveBtn" type="button">
+          <i class="fas fa-save"></i></button>
+    </div>
+
+       <!-- 2 PM -->
+       <div class="row time-block" id="2PM">
+        <div class="col-md-1 time">
+       <p> 2 PM </p>
         </div>
+        <textarea class="col-md-10 description" aria-label="Type Your task for 2 PM"></textarea>
+        <button class="btn btn-outline-secondary saveBtn" type="button">
+          <i class="fas fa-save"></i></button>
+    </div>
+
+      <!-- 3 PM -->
+      <div class="row time-block" id="3PM">
+        <div class="col-md-1 time">
+         <p>3 PM </p>
+        </div>
+        <textarea class="col-md-10 description" aria-label="Type Your task for 3 PM"></textarea>
+        <button class="btn btn-outline-secondary saveBtn" type="button">
+          <i class="fas fa-save"></i></button>
+    </div>
+
+      <!-- 4 PM -->
+      <div class="row time-block" id="4PM">
+          <div class="col-md-1 time">
+            <p>4 PM </p>
+          </div>
+          <textarea class="col-md-10 description" aria-label="Type Your task for 4 PM"></textarea>
+          <button class="btn btn-outline-secondary saveBtn" type="button">
+            <i class="fas fa-save"></i></button>
       </div>
 
-      <div class="input-group row time-block">
-        <div class="input-group-append">
-          <span class="input-group-text light hour">2 PM</span>
+      <!-- 5 PM -->
+      <div class="row time-block" id="5 PM">
+        <div class="col-md-1 time">
+         <p> 5 PM </p>
         </div>
-        <textarea class="form-control col-md-10 description light" aria-label="With textarea" id="14"
-         ></textarea>
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="14"><i
-              class="fas fa-save"></i></button>
-        </div>
-      </div>
+        <textarea class="col-md-10 description" aria-label="Type Your task for 5 PM"></textarea>
+        <button class="btn btn-outline-secondary saveBtn" type="button">
+          <i class="fas fa-save"></i></button>
+    </div>
 
-      <div class="input-group row time-block">
-        <div class="input-group-append">
-          <span class="input-group-text light hour">3 PM</span>
-        </div>
-        <textarea class="form-control col-md-10 description light" aria-label="With textarea" id="15"
-         ></textarea>
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="15"><i
-              class="fas fa-save"></i></button>
-        </div>
-      </div>
-
-      <div class="input-group row time-block">
-        <div class="input-group-append">
-          <span class="input-group-text light hour">4 PM</span>
-        </div>
-        <textarea class="form-control col-md-10 description light" aria-label="With textarea" id="16"
-          ></textarea>
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="16"><i
-              class="fas fa-save"></i></button>
-        </div>
-      </div>
-
-      <div class="input-group row time-block">
-        <div class="input-group-append">
-          <span class="input-group-text light hour">5 PM</span>
-        </div>
-        <textarea class="form-control col-md-10 description light" aria-label="With textarea" id="17"
-         ></textarea>
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary saveBtn" type="button" id="button-addon2" data-time="17"><i
-              class="fas fa-save"></i></button>
-        </div>
-      </div>
-      </div>
+    </div>
 
 
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+      <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
       <script src="assets/app.js"></script>
 
 </body>

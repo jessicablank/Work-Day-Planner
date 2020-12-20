@@ -1,4 +1,7 @@
 // wait for page to finish loading
+
+dayjs().format()
+
 $(function(){
 let dt = new Date();
 let todaysDate =  `${dt.getMonth()+1} / ${dt.getDate()} / ${dt.getFullYear()}`;
@@ -28,14 +31,14 @@ function checkTime(){
     $("#" + hour).addClass("bg-warning");
   } else {
     //If after 5pm, toggle dark mode
-    $(".hour").addClass("bg-primary")
-    $(".hour").addClass("text-white")
-    $(".description").addClass("bg-primary")
-    $(".description").addClass("text-white")
-    $(".saveBtn").addClass("bg-primary")
-    $(".saveBtn").addClass("text-white")
-    $("body").addClass("bg-secondary")
-    $("body").addClass("text-white")
+    // $(".hour").addClass("bg-primary")
+    // $(".hour").addClass("text-white")
+    // $(".description").addClass("bg-primary")
+    // $(".description").addClass("text-white")
+    // $(".saveBtn").addClass("bg-primary")
+    // $(".saveBtn").addClass("text-white")
+    // $("body").addClass("bg-secondary")
+    // $("body").addClass("text-white")
   }
   }  
  }
@@ -44,7 +47,7 @@ function checkTime(){
  
 
 //button to clear local and refresh the page
-$("#clear").click(function() {
+$("#clearBTN").click(function() {
     localStorage.clear();
     location.reload()
 });
