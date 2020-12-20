@@ -1,10 +1,12 @@
 # Work-Day-Planner
+
+Work in progress to update original boot camp homework submission with a dark-mode after 5pm and stop using moment js based on this article https://www.sitepoint.com/date-fns-javascript-date-library/
+
 A simple planner for your work day: 
 [Git Hub Deployed Page Link](https://jessicablank.github.io/Work-Day-Planner/)
 
 Screen Shot of deployed webpage:
 ![screenshot of homepage](https://github.com/jessicablank/Work-Day-Planner/blob/master/screenshot%20of%20homepage.PNG)
-
 
 ## Project Details
 * GIVEN an HTML template for a day planner styled with CSS

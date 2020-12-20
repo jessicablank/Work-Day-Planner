@@ -1,36 +1,47 @@
+// wait for page to finish loading
+$(function(){
+let dt = new Date();
+let todaysDate =  `${dt.getMonth()+1} / ${dt.getDate()} / ${dt.getFullYear()}`;
+let currentHour = dt.getHours();
+console.log(currentHour)
 
-//set variable for moment.js
-var todayDate = moment();
-
-//pull today's date, connect to id in html header, and format
-$("#currentDay").text(todayDate.format('dddd, '+'MMMM Do, ' +'YYYY'));
-
- //set variable for 12-hour time format
- var currentTime = moment().format("H");
-  //set variable for 24-hour time format
- var milTime = moment().format("H");
+// Display date in header
+$("#currentDay").text(todaysDate);
 
 
- for (var hour = 9; hour <= 24; hour++) {
-    var index = hour;
-    var blockTime = $("#" + index).data("military");
-  
-
-  // set color attribute for blocks according to current time using classes in css file
-  if (blockTime === milTime) {
-    $("#" + index).addClass("present");
-  } 
-  else if (blockTime < milTime) {
-    $("#" + index).addClass("past");
-  }
-  else if (blockTime > milTime) {
-    $("#" + index).addClass("future");
-  } else {
-    halfmoon.toggleDarkMode();
-  }
-  
- }
+function checkTime(){
+  let dt = new Date();
+  let currentHour = dt.getHours();
+  //Loop over time blocks
+  for (let hour = 9; hour <=24; hour++){
+    let blockTime = $("#"+ hour)
     
+  // set color attribute for blocks according to current time using bootstrap classes
+  if (blockTime < currentHour){
+    $("#" + hour).addClass("bg-secondary");
+  } else if
+  (blockTime === currentHour) {
+    $("#" + hour).removeClass("bg-secondary");
+    $("#" + hour).addClass("bg-success");
+  } else if (blockTime > currentHour) {
+    $("#" + hour).removeClass("bg-success");
+    $("#" + hour).addClass("bg-warning");
+  } else {
+    //If after 5pm, toggle dark mode
+    $(".hour").addClass("bg-primary")
+    $(".hour").addClass("text-white")
+    $(".description").addClass("bg-primary")
+    $(".description").addClass("text-white")
+    $(".saveBtn").addClass("bg-primary")
+    $(".saveBtn").addClass("text-white")
+    $("body").addClass("bg-secondary")
+    $("body").addClass("text-white")
+  }
+  }  
+ }
+
+ setInterval(checkTime(), 30000)
+ 
 
 //button to clear local and refresh the page
 $("#clear").click(function() {
@@ -74,6 +85,6 @@ $(".saveBtn").on("click", function() {
     localStorage.setItem(messageId, $("#" + messageId).val());
   })
 
-
+})
 
 
