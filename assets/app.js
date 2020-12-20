@@ -1,4 +1,5 @@
-///set variable for moment.js
+
+//set variable for moment.js
 var todayDate = moment();
 
 //pull today's date, connect to id in html header, and format
@@ -10,13 +11,13 @@ $("#currentDay").text(todayDate.format('dddd, '+'MMMM Do, ' +'YYYY'));
  var milTime = moment().format("H");
 
 
- for (var hour = 9; hour <= 17; hour++) {
+ for (var hour = 9; hour <= 24; hour++) {
     var index = hour;
     var blockTime = $("#" + index).data("military");
   
 
   // set color attribute for blocks according to current time using classes in css file
-  if (blockTime == milTime) {
+  if (blockTime === milTime) {
     $("#" + index).addClass("present");
   } 
   else if (blockTime < milTime) {
@@ -24,6 +25,8 @@ $("#currentDay").text(todayDate.format('dddd, '+'MMMM Do, ' +'YYYY'));
   }
   else if (blockTime > milTime) {
     $("#" + index).addClass("future");
+  } else {
+    halfmoon.toggleDarkMode();
   }
   
  }
