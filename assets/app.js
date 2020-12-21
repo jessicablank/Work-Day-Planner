@@ -1,6 +1,6 @@
-// Wait for page to finish loading
-$(function(){
-  //Load date on jumbotron
+
+
+//Load date on jumbotron
 let dt = new Date();
 let todaysDate =  `${dt.getMonth()+1} / ${dt.getDate()} / ${dt.getFullYear()}`;
 $("#currentDay").text(todaysDate);
@@ -19,60 +19,45 @@ $(".saveBtn").on("click", function() {
   })
 
 function checkTime(){
-  let currentHour = dayjs().hour()
-  console.log(currentHour)
+  let currentHour = dt.getHours()
+  
   //Loop over time blocks
   $(".time-block").each(function(){
-    let blockTime= parseInt($(this).attr("id").split("-")[1])
+    // parseInt takes the id of the block and turns it from a string to a number
+    let blockTime = parseInt($(this).attr("id").split("-")[1])
+    
 
   // set color attribute for description according to current time using bootstrap classes
   if (blockTime < currentHour){
-    $(this).addClass("bg-secondary");
+    $(this.children[1]).addClass("bg-secondary");
   } else if
   (blockTime === currentHour) {
-    $(this).removeClass("bg-secondary");
-    $(this).addClass("bg-success");
+  $(this.children[1]).removeClass("bg-secondary");
+  $(this.children[1]).addClass("bg-success");
   } else if (blockTime > currentHour) {
-    $(this).removeClass("bg-success");
-    $(this).addClass("bg-warning");
-  } else {
-    // If after 5pm, toggle dark mode
-    // $(".hour").addClass("bg-primary")
-    // $(".hour").addClass("text-white")
-    // $(".description").addClass("bg-primary")
-    // $(".description").addClass("text-white")
-    // $(".saveBtn").addClass("bg-primary")
-    // $(".saveBtn").addClass("text-white")
-    // $("body").addClass("bg-secondary")
-    // $("body").addClass("text-white")
-  }
-})
- }
-
-
-
+    $(this.children[1]).removeClass("bg-success");
+    $(this.children[1]).addClass("bg-warning");
+  } 
+  })
+}
  
-
 //button to clear local and refresh the page
 $("#clearBTN").click(function() {
     localStorage.clear();
     location.reload()
 });
 
-  //Load any saved data from local storage
-  $("#9AM .description").val(localStorage.getItem("9AM"))
-  $("#10AM .description").val(localStorage.getItem("10AM"))
-  $("#11AM .description").val(localStorage.getItem("11AM"))
-  $("#12PM .description").val(localStorage.getItem("12AM"))
-  $("#1PM .description").val(localStorage.getItem("1PM"))
-  $("#2PM .description").val(localStorage.getItem("2PM"))
-  $("#3PM .description").val(localStorage.getItem("3PM"))
-  $("#4PM .description").val(localStorage.getItem("4PM"))
-  $("#5PM .description").val(localStorage.getItem("5PM"))
+   // load any saved data from localStorage
+   $("#hour-9 .description").val(localStorage.getItem("hour-9"));
+   $("#hour-10 .description").val(localStorage.getItem("hour-10"));
+   $("#hour-11 .description").val(localStorage.getItem("hour-11"));
+   $("#hour-12 .description").val(localStorage.getItem("hour-12"));
+   $("#hour-13 .description").val(localStorage.getItem("hour-13"));
+   $("#hour-14 .description").val(localStorage.getItem("hour-14"));
+   $("#hour-15 .description").val(localStorage.getItem("hour-15"));
+   $("#hour-16 .description").val(localStorage.getItem("hour-16"));
+   $("#hour-17 .description").val(localStorage.getItem("hour-17"));
 
 
-
-
-})
 
 
