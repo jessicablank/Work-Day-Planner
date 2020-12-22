@@ -1,11 +1,10 @@
 
-
 //Load date on jumbotron
 let dt = new Date();
 let todaysDate =  `${dt.getMonth()+1} / ${dt.getDate()} / ${dt.getFullYear()}`;
 $("#currentDay").text(todaysDate);
 
-//Check Time
+//Check current time every 15 seconds
 setInterval(checkTime(), 15000);
 
 // Activate save button
@@ -18,24 +17,23 @@ $(".saveBtn").on("click", function() {
     localStorage.setItem(time,task);
   })
 
+  // When checking time, change the color of the text area
 function checkTime(){
   let currentHour = dt.getHours()
   
-  //Loop over time blocks
   $(".time-block").each(function(){
-    // parseInt takes the id of the block and turns it from a string to a number
+    // parseInt takes the id of the time block and converts the string into a number for validation
     let blockTime = parseInt($(this).attr("id").split("-")[1])
-    
-
+  
   // set color attribute for description according to current time using bootstrap classes
   if (blockTime < currentHour){
-    $(this.children[1]).addClass("bg-secondary");
+    $(this.children[1]).addClass("bg-secondary text-white");
   } else if
   (blockTime === currentHour) {
-  $(this.children[1]).removeClass("bg-secondary");
-  $(this.children[1]).addClass("bg-success");
+  $(this.children[1]).removeClass("bg-secondary text-white");
+  $(this.children[1]).addClass("bg-success text-white");
   } else if (blockTime > currentHour) {
-    $(this.children[1]).removeClass("bg-success");
+    $(this.children[1]).removeClass("bg-success text-white");
     $(this.children[1]).addClass("bg-warning");
   } 
   })
