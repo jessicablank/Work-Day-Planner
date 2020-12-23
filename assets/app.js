@@ -6,6 +6,12 @@ $("#current-day").text(todaysDate);
 // Check current time every 15 seconds
 setInterval(checkTime(), 15000);
 
+// Activate tool tips
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
 // Activate save button
 $(".saveBtn").on("click", function () {
 
