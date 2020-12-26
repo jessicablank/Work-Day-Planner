@@ -30,8 +30,6 @@ $(document).ready(function () {
       .val(localStorage.getItem(localStorage.key(i)));
   }
 
-
-
   //button to clear local storage for a new day
   $("#clearBTN").click(function () {
     localStorage.clear();
@@ -69,7 +67,6 @@ $(document).ready(function () {
     });
   }
 
-  // Call your function ◕‿◕
+  // Call the time checking function to update the description field colors ◕‿◕
   checkTime();
-
 });
