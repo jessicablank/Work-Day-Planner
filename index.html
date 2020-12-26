@@ -23,10 +23,19 @@
   <body>
     <header class="jumbotron">
       <h1 class="display-3" id="top-of-page">Work Day Scheduler</h1>
-      <p class="lead">A simple way to schedule your work day!</p>
+      <p class="lead">A simple way to schedule your work day! 
+       <br> Remember to hit the "save" button to lock in your task for the hour. </p>
       <p id="current-day" class="display-4 text-info"></p>
-      <button id="clearBTN" class="btn btn-outline-danger">
-        CLEAR SCHEDULE <i class="fas fa-exclamation-triangle"></i>
+      <p id="current-time" class="display-5 text-info"></p>
+      <button
+        data-toggle="tooltip"
+        data-placement="bottom"
+        title="It's a New Day! (◠‿◠)"
+        id="clearBTN"
+        class="btn btn-outline-danger"
+      >
+        CLEAR SCHEDULE
+        <i class="fas fa-exclamation-triangle"></i>
       </button>
       <!-- Octocat in the Corner -->
       <a
@@ -38,7 +47,6 @@
           data-toggle="tooltip"
           data-placement="left"
           title="Visit me on GitHub"
-          data-original-title="View source on GitHub"
           width="80"
           height="80"
           viewBox="0 0 250 250"
@@ -75,7 +83,6 @@
             data-toggle="tooltip"
             data-placement="left"
             title="Go to Bottom"
-            data-original-title="Go to Bottom"
             class="fa fa-angle-double-down"
             aria-hidden="true"
           ></i></h1
@@ -166,7 +173,6 @@
               data-toggle="tooltip"
               data-placement="right"
               title="Save"
-              data-original-title="Save"
               class="fas fa-save align-middle"
             ></i>
           </h3>
