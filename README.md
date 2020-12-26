@@ -47,7 +47,7 @@ Original app.js file used a data attribute to update the HTML classes:
         $(descriptionField).addClass("bg-secondary text-white border-primary");
 ```
 
-#### localStorage 
+### localStorage 
 
 This "ah-ha" moment helped me clean up other code in the app.js file. Most especially the way localStorage items are saved and retrieved. 
 
