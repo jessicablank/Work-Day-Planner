@@ -23,7 +23,7 @@ $(document).ready(function () {
   // Check localStorage for data
   // if there is data, match the time to the task description field id
   // and populate the field with task values. 
-  for (let i in localStorage) {
+  for (let i = 0; i < localStorage.length; i++) {
     let blockTimeId = localStorage.key(i);
     $(blockTimeId)
       .children(".description")
@@ -39,30 +39,33 @@ $(document).ready(function () {
   // ~~~ ◔ ⌣ ◔ Update time and color displays ~~~
   function checkTime() {
     // Load date & time on jumbotron
-    let dt = new Date();
+    let now = new Date();
+
+    let months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+    let currentMonth = months[now.getMonth()];
     let todaysDate = `${
-      dt.getMonth() + 1
-    } / ${dt.getDate()} / ${dt.getFullYear()}`;
+      currentMonth
+    } ${now.getDate()}, ${now.getFullYear()}`;
     $("#current-day").text(todaysDate);
-    let currentHour = dt.getHours();
-    let currentTime = dt.toLocaleTimeString();
+    let currentHour = now.getHours();
+    let currentTime = now.toLocaleTimeString();
     document.getElementById("current-time").innerHTML = currentTime;
 
     // Loop over the time blocks while checking the current time
     $(".time-block").each(function () {
       // parseInt takes the id of the time block and converts the string into a number for validation
       let blockTime = parseInt($(this).attr("id").split("-")[1]);
-      let descriptionField = this.children[1];
+      let taskDescriptionField = this.children[1];
 
       // Set color attribute for description according to current time using Bootswatch classes
       if (blockTime < currentHour) {
-        $(descriptionField).addClass("bg-secondary text-white border-primary");
+        $(taskDescriptionField).addClass("bg-secondary text-white border-primary");
       } else if (blockTime === currentHour) {
-        $(descriptionField).removeClass("bg-secondary text-white");
-        $(descriptionField).addClass("bg-success text-white border-success");
+        $(taskDescriptionField).removeClass("bg-secondary text-white");
+        $(taskDescriptionField).addClass("bg-success text-white border-success");
       } else if (blockTime > currentHour) {
-        $(descriptionField).removeClass("bg-success text-white");
-        $(descriptionField).addClass("bg-primary text-white");
+        $(taskDescriptionField).removeClass("bg-success text-white");
+        $(taskDescriptionField).addClass("bg-primary text-white");
       }
     });
   }
