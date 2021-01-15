@@ -74,7 +74,7 @@ A handy loop with DOM traversal allows for the addition of a new time blocks (li
  for (let i = 0; i < localStorage.length; i++) {
     let blockTimeId = localStorage.key(i);
     $(blockTimeId)
-      .children(".description")
+      .children(".task")
       .val(localStorage.getItem(localStorage.key(i)));
   }
 ```

@@ -60,8 +60,6 @@ $(document).ready(function () {
 
       // Set color attribute for description according to current time using Bootswatch classes
       if (blockTime < currentHour) {
-        $(taskDescriptionField).removeClass("bg-primary text-white");
-        $(taskDescriptionField).removeClass("bg-success text-white border-success");
         $(taskDescriptionField).addClass("bg-secondary text-white border-primary");
       } else if (blockTime === currentHour) {
         $(taskDescriptionField).removeClass("bg-secondary text-white border-primary");
