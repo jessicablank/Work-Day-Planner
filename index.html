@@ -21,11 +21,11 @@
   </head>
 
   <body>
-    <header class="jumbotron">
-      <h1 class="display-3" id="top-of-page">Work Day Scheduler</h1>
+    <header class="jumbotron text-center">
+      <h1 class="display-4" id="top-of-page">Work Day Scheduler</h1>
       <p class="lead">A simple way to schedule your work day! </p>
         <hr class="my-4">
-       <p>Remember to hit the "save" button to lock in your task for the hour. </p>
+       <p class="lead">Remember to hit the "save" button to lock in your task for the hour. </p>
       <p id="current-day" class="display-4 text-info"></p>
       <p id="current-time" class="display-5 text-info"></p>
       <button
@@ -38,6 +38,8 @@
         CLEAR SCHEDULE
         <i class="fas fa-exclamation-triangle"></i>
       </button>
+      <hr>
+     
       <!-- Octocat in the Corner -->
       <a
         href="https://github.com/jessicablank/Work-Day-Planner"
@@ -77,6 +79,7 @@
       </a>
     </header>
     <!-- time blocks container -->
+     <!-- Badges Row -->
     <div class="container">
       <a href="#page-bottom"
         ><h1 class="text-center" id="page-top">
@@ -88,6 +91,11 @@
             aria-hidden="true"
           ></i></h1
       ></a>
+      <h3 class="text-center">
+        <span class="badge badge-pill badge-secondary">Past</span>
+        <span class="badge badge-pill badge-success">Present</span>
+        <span class="badge badge-pill badge-primary">Future</span>
+        </h3>
       <!-- 8 AM -->
       <div class="row time-block" id="hour-8">
         <div class="col-md-1 time border-info">

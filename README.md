@@ -23,7 +23,7 @@ Fork, clone, or download and go! Ready to run in browser.
 > Sometimes it *clicks* during boot camp, sometimes it *clicks* after boot camp. 
 *- My UCSD Extension Coding Boot Camp Instructor*
 
-I often heard those wise words from my instructor ringing in my ears as I over-coded my home work assignments late at night. This was one of them. I remember getting help from a super coder classmate and not really understanding what we did to make it work, but it worked! I added a clear button just to prove that I had, in fact, learned something about localStorage. 
+I often heard those wise words from my instructor ringing in my ears as I struggled through my home work assignments. This was one of them. With the help of classmates and Google I managed to make it work with a lot of code. I added a clear button just to prove that I had, in fact, learned something about localStorage. 
 
 When I came back to this assignment I experienced one of those "click" moments my teacher described. My refactoring goals were to add new styling and eliminate the use of moment.js. As the code made more and more sense to me, I enthusiastically added detailed comments with ASCII faces to the app.js file ◕ ‿ ◕. 
 
@@ -61,7 +61,7 @@ and so on...
 
 A handy loop with DOM traversal allows for the addition of a new time blocks (like 8 AM) without more jQuery code:
 ```
- for (let i in localStorage) {
+ for (let i = 0; i < localStorage.length; i++) {
     let blockTimeId = localStorage.key(i);
     $(blockTimeId)
       .children(".description")
