@@ -13,7 +13,7 @@ $(document).ready(function () {
   $(".saveBtn").on("click", function () {
     // Set variables using DOM relationships
     let time = "#" + $(this).parent().attr("id");
-    let task = $(this).siblings(".description").val();
+    let task = $(this).siblings(".task").val();
 
     // Save in local storage with key as "#hour-X" and value as description field
     // The key will match to time block id fields in index.html
@@ -26,7 +26,7 @@ $(document).ready(function () {
   for (let i = 0; i < localStorage.length; i++) {
     let blockTimeId = localStorage.key(i);
     $(blockTimeId)
-      .children(".description")
+      .children(".task")
       .val(localStorage.getItem(localStorage.key(i)));
   }
 
@@ -53,19 +53,22 @@ $(document).ready(function () {
     document.getElementById("current-time").innerHTML = currentTime;
 
     // Loop over the time blocks while checking the current time
-    $(".time-block").each(function () {
+    $(".task-time").each(function () {
       // parseInt takes the id of the time block and converts the string into a number for validation
       let blockTime = parseInt($(this).attr("id").split("-")[1]);
       let taskDescriptionField = this.children[1];
 
       // Set color attribute for description according to current time using Bootswatch classes
       if (blockTime < currentHour) {
+        $(taskDescriptionField).removeClass("bg-primary text-white");
+        $(taskDescriptionField).removeClass("bg-success text-white border-success");
         $(taskDescriptionField).addClass("bg-secondary text-white border-primary");
       } else if (blockTime === currentHour) {
-        $(taskDescriptionField).removeClass("bg-secondary text-white");
+        $(taskDescriptionField).removeClass("bg-secondary text-white border-primary");
         $(taskDescriptionField).addClass("bg-success text-white border-success");
       } else if (blockTime > currentHour) {
-        $(taskDescriptionField).removeClass("bg-success text-white");
+        $(taskDescriptionField).removeClass("bg-secondary text-white border-primary");
+        $(taskDescriptionField).removeClass("bg-success text-white border-success");
         $(taskDescriptionField).addClass("bg-primary text-white");
       }
     });
