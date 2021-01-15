@@ -58,16 +58,22 @@ $(document).ready(function () {
       let blockTime = parseInt($(this).attr("id").split("-")[1]);
       let taskDescriptionField = this.children[1];
 
-      // Set color attribute for description according to current time using Bootswatch classes
+      // assign class variables using using Bootswatch styling classes
+      const past = "bg-secondary text-white border-primary"
+      const present = "bg-success text-white border-success"
+      const future = "bg-primary text-white"
+
+      // Set color attribute for description according to current time 
       if (blockTime < currentHour) {
-        $(taskDescriptionField).addClass("bg-secondary text-white border-primary");
+        $(taskDescriptionField).removeClass(present);
+        $(taskDescriptionField).addClass(past);
       } else if (blockTime === currentHour) {
-        $(taskDescriptionField).removeClass("bg-secondary text-white border-primary");
-        $(taskDescriptionField).addClass("bg-success text-white border-success");
+        $(taskDescriptionField).removeClass(past);
+        $(taskDescriptionField).addClass(present);
       } else if (blockTime > currentHour) {
-        $(taskDescriptionField).removeClass("bg-secondary text-white border-primary");
-        $(taskDescriptionField).removeClass("bg-success text-white border-success");
-        $(taskDescriptionField).addClass("bg-primary text-white");
+        $(taskDescriptionField).removeClass(past);
+        $(taskDescriptionField).removeClass(present);
+        $(taskDescriptionField).addClass(future);
       }
     });
   }
