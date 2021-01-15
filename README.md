@@ -11,6 +11,7 @@ A simple way to plan your workday! A coding boot camp homework assignment to pra
 
 ## Table of Contents
 * [Installation](#installation)
+* [User Story](#user-story)
 * [Project Story](#project-story)
 * [Technologies Used](#technologies-used)
 * [Questions](#questions)
@@ -19,11 +20,20 @@ A simple way to plan your workday! A coding boot camp homework assignment to pra
 ## Installation Instructions
 Fork, clone, or download and go! Ready to run in browser. 
 
+## User Story
+As a busy coder, I want a simple hour by hour browser scheduling tool. 
+* I want my tasks to be saved in localStorage so I can close the browser and save my tasks. 
+* I want to see whether the current hour is in the past, present, or future of my workday.
+* I want a way to clear my schedule for a new day. 
+
+
 ## Project Story
 > Sometimes it *clicks* during boot camp, sometimes it *clicks* after boot camp. 
 *- My UCSD Extension Coding Boot Camp Instructor*
 
-I often heard those wise words from my instructor ringing in my ears as I struggled through my home work assignments. This was one of them. With the help of classmates and Google I managed to make it work with a lot of code. I added a clear button just to prove that I had, in fact, learned something about localStorage. 
+I often heard those wise words from my instructor ringing in my ears as I struggled through my home work assignments. This was one of them. 
+
+I struggled with the localStorage aspect of this assignment to save task descriptions for each time block. I reached out to classmates and Google for help and it worked! I added a clear button just to prove that I had, in fact, learned something about localStorage. 
 
 When I came back to this assignment I experienced one of those "click" moments my teacher described. My refactoring goals were to add new styling and eliminate the use of moment.js. As the code made more and more sense to me, I enthusiastically added detailed comments with ASCII faces to the app.js file ◕ ‿ ◕. 
 
@@ -42,9 +52,9 @@ Original app.js file used a data attribute to update the HTML classes:
   ```
   Refactored uses DOM selectors and eliminates the need for a data attribute:
   ```
-  let descriptionField = this.children[1];
+  let taskDescriptionField = this.children[1];
    if (blockTime < currentHour) {
-        $(descriptionField).addClass("bg-secondary text-white border-primary");
+        $(taskDescriptionField).addClass("bg-secondary text-white border-primary");
 ```
 
 ### localStorage 

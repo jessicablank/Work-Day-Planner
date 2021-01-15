@@ -40,12 +40,13 @@ $(document).ready(function () {
   function checkTime() {
     // Load date & time on jumbotron
     let now = new Date();
-
+    // Add month's array to display the month name rather than number
     let months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
     let currentMonth = months[now.getMonth()];
     let todaysDate = `${
       currentMonth
     } ${now.getDate()}, ${now.getFullYear()}`;
+    //Display date and time
     $("#current-day").text(todaysDate);
     let currentHour = now.getHours();
     let currentTime = now.toLocaleTimeString();
