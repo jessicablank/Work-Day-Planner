@@ -52,9 +52,11 @@ Original app.js file used a data attribute to update the HTML classes:
   ```
   Refactored uses DOM selectors and eliminates the need for a data attribute:
   ```
+  let taskTime = parseInt($(this).attr("id").split("-")[1]);
   let taskDescriptionField = this.children[1];
-   if (blockTime < currentHour) {
-        $(taskDescriptionField).addClass("bg-secondary text-white border-primary");
+ 
+   if (taskTime < currentHour) {
+        $(taskDescriptionField).addClass("present");
 ```
 
 ### localStorage 
@@ -69,11 +71,11 @@ var nineAM = localStorage.getItem("9");
 and so on...
 ```
 
-A handy loop with DOM traversal allows for the addition of a new time blocks (like 8 AM) without more jQuery code:
+A handy for loop with DOM traversal allows for the addition of a new time blocks (like 8 AM) without more jQuery code:
 ```
- for (let i = 0; i < localStorage.length; i++) {
-    let blockTimeId = localStorage.key(i);
-    $(blockTimeId)
+  for (let i = 0; i < localStorage.length; i++) {
+    let taskTimeID = localStorage.key(i);
+    $(taskTimeID)
       .children(".task")
       .val(localStorage.getItem(localStorage.key(i)));
   }

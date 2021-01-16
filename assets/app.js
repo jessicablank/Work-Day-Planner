@@ -24,8 +24,8 @@ $(document).ready(function () {
   // if there is data, match the time to the task description field id
   // and populate the field with task values. 
   for (let i = 0; i < localStorage.length; i++) {
-    let blockTimeId = localStorage.key(i);
-    $(blockTimeId)
+    let taskTimeID = localStorage.key(i);
+    $(taskTimeID)
       .children(".task")
       .val(localStorage.getItem(localStorage.key(i)));
   }
@@ -55,7 +55,7 @@ $(document).ready(function () {
     // Loop over the time blocks while checking the current time
     $(".task-time").each(function () {
       // parseInt takes the id of the time block and converts the string into a number for validation
-      let blockTime = parseInt($(this).attr("id").split("-")[1]);
+      let taskTime = parseInt($(this).attr("id").split("-")[1]);
       let taskDescriptionField = this.children[1];
 
       // assign class variables using using Bootswatch styling classes
@@ -64,15 +64,16 @@ $(document).ready(function () {
       const future = "bg-primary text-white"
 
       // Set color attribute for description according to current time 
-      if (blockTime < currentHour) {
+      if (taskTime < currentHour) {
         $(taskDescriptionField).removeClass(present);
         $(taskDescriptionField).addClass(past);
-      } else if (blockTime === currentHour) {
+      } else if (taskTime === currentHour) {
         $(taskDescriptionField).removeClass(past);
         $(taskDescriptionField).addClass(present);
-      } else if (blockTime > currentHour) {
+      } 
+       else if (taskTime > currentHour) {
         $(taskDescriptionField).removeClass(past);
-        $(taskDescriptionField).removeClass(present);
+        $(taskDescriptionField).removeClass(present)
         $(taskDescriptionField).addClass(future);
       }
     });
